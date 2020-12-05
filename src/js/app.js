@@ -52,15 +52,6 @@ const function2 = (_userCredentialed, obj) => {
 
 //   return account;
 //   }
-crypto.generateKeyPair(
-  "rsa",
-  {
-    modulusLength: 2048, // Compliant
-    publicKeyEncoding: { type: "spki", format: "pem" },
-    privateKeyEncoding: { type: "pkcs8", format: "pem" },
-  },
-  callback
-); // Compliant
 
 function1();
 function2({ username: "Vera", password: "123" }, {});
