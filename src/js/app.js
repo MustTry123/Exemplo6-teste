@@ -41,6 +41,23 @@ const function2 = (_userCredentialed, obj) => {
   callToDB(obj);
 };
 
+// public BankAccount createBankAccount(String accountNumber, String accountType,
+//   String accountName, String accountSSN, double balance) {
+//   BankAccount account = new BankAccount();
+//   account.setAccountNumber(accountNumber);
+//   account.setAccountType(accountType);
+//   account.setAccountOwnerName(accountName);
+//   account.setAccountOwnerSSN(accountSSN);
+//   account.setBalance(balance);
+
+//   return account;
+//   }
+crypto.generateKeyPair("rsa", {
+  modulusLength: 2048, // Compliant
+  publicKeyEncoding: { type: "spki", format: "pem" },
+  privateKeyEncoding: { type: "pkcs8", format: "pem" },
+}); // Compliant
+
 function1();
 function2({ username: "Vera", password: "123" }, {});
 function2({ username: "Tomas", password: "123" }, {});
